@@ -17,9 +17,11 @@ const BookType = new GraphQLObjectType({
 	fields: () => ({
 		title: {
 			type: GraphQLString,
-			resolve: xml => xml.title[0]		},
+			resolve: xml => xml.title[0]
+		},
 		isbn: {
-			type: GraphQLString
+			type: GraphQLString,
+			resolve: xml => xml.isbn[0]
 		}
 
 	})
